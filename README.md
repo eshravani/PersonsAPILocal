@@ -22,15 +22,17 @@ In this project, you will:
 
    ```bash
    npm install -g json-server
-Setup
+## Setup
 Download the persons.json file containing mock data for API testing.
 
 Start json-server with persons.json:
 
 Open a terminal and navigate to the directory containing persons.json.
 Start the server with the following command:
+
    ```bash
    json-server --watch persons.json
+
 This will start a local API server at http://localhost:3000.
 Clone this repository:
 
@@ -42,7 +44,8 @@ Install dependencies: Run the following Maven command to install all necessary d
 
     ```bash
     mvn clean install
-Usage
+
+## Usage
 Define POJO Classes
 
 Create Java POJO classes that mirror the structure of persons.json data.
