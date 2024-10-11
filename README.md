@@ -35,23 +35,23 @@ json-server --watch persons.json
 This will start a local API server at http://localhost:3000.
 Clone this repository:
 
-bash
-Copy code
-git clone https://github.com/username/ApiAutomationPractice.git
+
+   ```bash
+   git clone https://github.com/username/ApiAutomationPractice.git
 Install dependencies: Run the following Maven command to install all necessary dependencies:
 
-bash
-Copy code
-mvn clean install
+
+   ```bash
+   mvn clean install
 Usage
 Define POJO Classes
 
 Create Java POJO classes that mirror the structure of persons.json data.
 Run Tests Run your tests with:
 
-bash
-Copy code
-mvn test
+
+   ```bash
+   mvn test
 This will execute the tests defined in ApiTest.java.
 
 Validate API Responses
