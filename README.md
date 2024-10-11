@@ -23,6 +23,7 @@ In this project, you will:
    ```bash
    npm install -g json-server
 ## Setup
+
 Download the persons.json file containing mock data for API testing.
 
 Start json-server with persons.json:
@@ -34,8 +35,8 @@ Start the server with the following command:
    json-server --watch persons.json
 
 This will start a local API server at http://localhost:3000.
-Clone this repository:
-
+## Clone this repository:
+This will start a local API server at http://localhost:3000.
 
     ```bash
     git clone https://github.com/username/ApiAutomationPractice.git
