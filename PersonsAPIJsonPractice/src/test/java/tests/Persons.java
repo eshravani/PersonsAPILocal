@@ -1,7 +1,10 @@
 package tests;
 
 import endpoints.PersonsResources;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import payloads.person.Contacts;
@@ -36,4 +39,22 @@ public class Persons extends PersonsResources {
         }
         Assert.assertEquals(email, "john.doe@example.com");
     }
-}
+
+    @Test
+    public void validateEmailWithJsonObjects()
+    {
+        res  = getPersonsDetails();
+        JSONObject jo = new JSONObject(res.asString());
+        JSONArray ja = jo.getJSONArray("contacts");
+        int size= ja.length();
+       String email="";
+        for(int i=0;i<size;i++)
+        {
+            if(ja.getJSONObject(i).getString("type").equals("email"))
+            {
+                email=ja.getJSONObject(i).getString("value");
+            }
+
+        }
+        Assert.assertEquals(email,"john.doe@example.com");
+    }}
